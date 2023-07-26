@@ -1,15 +1,26 @@
+
+
 .card {
   display: inline-block;
   text-align: center;
-  width: 3em;
+  width: 2em;
   font-size: 2em;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(246, 5, 5, 0.2);
+  background-color: rgb(237, 95, 157);
   margin: 1em;
   user-select: none;
 
 }
 
 .activeCard{
-   color: rgb(18, 17, 17);
-   background: rgba(127, 231, 17, 0.833);
+   color: rgb(207, 17, 17);
+   background: rgba(46, 201, 7, 0.678);
 }
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #edc448ad;
+ }
