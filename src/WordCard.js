@@ -10,7 +10,7 @@ const prepareStateFromWord = given_word => {
     return {
         word,
         chars,
-        attempt: 1, //เล่นครั้งที่เท่าไหร่
+        attempt: 5, //เล่นครั้งที่เท่าไหร่
         guess:'',   //คลิกไปกี่คำแล้ว
         completed: false //การเล่นจบรึยัง
     }
@@ -31,10 +31,17 @@ export default function WordCard(props){
             if(guess == state.word){
                 console.log('yeah!')
                 setState({...state, completed: true})
-
+                alert(`congrats! You found the word ${props.value}`);
+                state.attempt = 5
             }else{
                 console.log('reset, next attempt')
-                setState({...state, guess: '',attempt: state.attempt +1} )
+                setState({...state, guess: '',attempt: state.attempt - 1})
+                if (state.attempt === 1) {
+                    alert("Game over! ")
+                    state.attempt = 5
+                    window.location.reload();
+                }
+
             }
         }
 
