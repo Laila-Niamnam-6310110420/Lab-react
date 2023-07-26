@@ -11,7 +11,7 @@ const prepareStateFromWord = given_word => {
         word,
         chars,
         attempt: 5, //เล่นครั้งที่เท่าไหร่
-        guess:'',   //คลิกไปกี่คำแล้ว
+        guess:'',   //คลิกไปกี่คำ
         completed: false //การเล่นจบรึยัง
     }
 
